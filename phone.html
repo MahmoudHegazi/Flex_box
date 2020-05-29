@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+
+
+      .box {
+        height: 400px;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 10px solid orange;
+        border-radius: 5%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    .box>* {
+        flex: 1 1 80px;
+        
+    }
+    .childe {
+      background-color: crimson;
+      border: 1px solid gold;
+      text-align: center;
+      line-height: 50px;
+      font-size: 27px;
+      padding-top: 10px;
+      color: white;
+    }
+    
+    /* easy besy my first two pseudo */
+    .childe:hover:not(:last-child) {
+      background-color: black;
+    }
+    
+    
+    .hand {
+      background-color: darkgreen;
+    }
+    .hand:hover {
+       color: gold;
+    }
+    
+</style>
+</head>
+<body>
+
+<h1>Telphone</h1>
+
+
+      <div class="box">
+        <div class="childe"  onclick="mysounder(this)">1</div>
+        <div class="childe"  onclick="mysounder(this)">4</div>
+        <div class="childe"  onclick="mysounder(this)">7</div>
+        <div class="childe"  onclick="mysounder(this)">4</div>
+        <div class="childe"  onclick="mysounder(this)">2</div>
+        <div class="childe"  onclick="mysounder(this)">5</div>
+        <div class="childe"  onclick="mysounder(this)">8</div>
+        <div class="childe"  onclick="mysounder(this)">0</div>
+        <div class="childe"  onclick="mysounder(this)">3</div>
+        <div class="childe"  onclick="mysounder(this)">6</div>
+        <div class="childe"  onclick="mysounder(this)">9</div>
+         <div class="childe" onclick="mysounder(this)">Close</div>
+         <div class="childe hand" id="mycalling" onclick="mycall()">Call</div>
+      </div>
+
+
+<!-- audio -->
+
+<audio id="presssound" style="display:none;"> 
+  <!-- call -->
+  <source src="https://raw.githubusercontent.com/MahmoudHegazi/hello-world/master/do.wav" type="audio/wav">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<audio id="callsound" style="display:none;"> 
+  <!-- call -->
+  <source src="https://raw.githubusercontent.com/MahmoudHegazi/hello-world/master/phone.wav" type="audio/wav">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+<script>
+
+
+const press= document.querySelectorAll(".childe");
+const phone= document.getElementById("mycalling");
+const pressSound= document.getElementById("presssound");
+const phoneSound= document.getElementById("callsound");
+
+function mycall() {
+   phoneSound.play();
+}
+
+
+
+function mysounder() {
+ 
+   pressSound.play();
+
+
+}
+</script>
+
+</body>
+</html>
