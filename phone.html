@@ -51,17 +51,17 @@
 
 
       <div class="box">
-        <div class="childe"  onclick="mysounder(this)">1</div>
-        <div class="childe"  onclick="mysounder(this)">4</div>
-        <div class="childe"  onclick="mysounder(this)">7</div>
-        <div class="childe"  onclick="mysounder(this)">4</div>
-        <div class="childe"  onclick="mysounder(this)">2</div>
-        <div class="childe"  onclick="mysounder(this)">5</div>
-        <div class="childe"  onclick="mysounder(this)">8</div>
-        <div class="childe"  onclick="mysounder(this)">0</div>
-        <div class="childe"  onclick="mysounder(this)">3</div>
-        <div class="childe"  onclick="mysounder(this)">6</div>
-        <div class="childe"  onclick="mysounder(this)">9</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">1</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">4</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">7</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">4</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">2</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">5</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">8</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">0</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">3</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">6</div>
+        <div class="childe" onmouseup="backstyle(this)" onclick="mysounder(this)">9</div>
          <div class="childe" onclick="mysounder(this)">Close</div>
          <div class="childe hand" id="mycalling" onclick="mycall()">Call</div>
       </div>
@@ -98,13 +98,18 @@ function mycall() {
 
 
 
-function mysounder() {
- 
+function mysounder(sol) {
+
    pressSound.play();
 
 
+}
+
+function backstyle(mybutton) {
+mybutton.style.background = "green";
 }
 </script>
 
 </body>
 </html>
+
