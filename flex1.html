@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+
+
+
+      .container {
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container>* {
+        flex: 1 1 80px;
+    }
+
+.box {
+  background-color: green;
+  margin: 5px;
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">First One</h1>
+
+<!-- It change the layout on resize not normal
+  handle any size even Result Size: 78 x 790 -->
+
+
+<div class="container">
+
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three</div>
+        <div class="box">Four</div>
+        <div class="box">Five</div>
+        <div class="box">Six</div>
+        <div class="box">Seven</div>
+        <div class="box">Eight</div>
+
+
+</div>
+
+
+</body>
+</html>
